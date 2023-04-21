@@ -1,0 +1,184 @@
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: lightgrey;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 8px;
+  padding: 0 24px;
+  padding-bottom: 20px;
+  font-family: fantasy;
+}
+
+#store {
+  position: relative;
+  float: left;
+  width: 70%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#cart {
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 60px;
+  overflow: hidden;
+}
+
+#cart>ul {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+}
+
+#cart>ul>li {
+  background-color: white;
+  padding: 8px;
+  margin: 1px 0 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#cart>ul>li:not(.removing):hover .remove-item {
+  position: absolute;
+  content: "x";
+  right: 0;
+  color: white;
+  background-color: #f44336;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border-radius: 12px;
+  margin-right: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 0px;
+}
+
+
+
+
+#pay {
+  position: absolute;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  bottom: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card-title {
+  text-shadow: 0 0 24px black;
+}
+
+#searchBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* CSS pour les éléments du panier */
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  border: 1px solid #ccc;
+}
+
+.cart-item-image {
+  height: 64px;
+  margin-right: 12px;
+}
+
+.cart-item-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.cart-item-quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart-item-quantity-label {
+  margin-right: 12px;
+}
+
+.cart-item-quantity-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cart-item-total {
+  font-weight: bold;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 12px;
+  text-align: right;
+}
+
+/* CSS pour les boutons + et - */
+
+.quantity-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background-color: #0069d9;
+}
+
+.quantity-label {
+  margin: 0 12px;
+}

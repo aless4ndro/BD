@@ -1,0 +1,56 @@
+    /* Styles généraux */
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    /* Styles du formulaire */
+    .form-container {
+      width: 30%;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f7f7f7;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    /* Styles pour les messages d'erreur */
+    .error {
+      color: #dc3545;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
