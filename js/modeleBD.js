@@ -25,12 +25,12 @@ jQuery(document).ready(function ($) {
 
     // Affichage des BD par auteur==================================================
     function displayAlbums(searchText) {
-        const $listBySeries = $("<ul>");
+        const $listBySeries = $("<p>");
         const searchOption = $("input[name='searchOption']:checked").val();
         const searchTextLower = searchText.toLowerCase();
 
         for (const [idSerie, serie] of series.entries()) {// Pour chaque série
-            const $li = $("<li>").text(serie.nom); // Créer un élément de liste
+            const $li = $("<p>").text(serie.nom).addClass("serie-name"); // Créer un élément de liste
             const $ul = $("<ul>");// Créer une liste imbriquée
             //creer aussi un boutton pour ajouter la bd au panier
 
@@ -67,9 +67,11 @@ jQuery(document).ready(function ($) {
                     continue;
                 }
 
-                const $liAlbum = $("<li>").text(
-                    `Album N°${album.numero} ${album.titre}, Auteur: ${auteur.nom}`
-                );
+                const $liAlbum = $("<li>").addClass("album-info");
+                const $albumText = $("<span>").html(
+                    `Album N°${album.numero}<br> ${album.titre} <br>Auteur: ${auteur.nom}`
+                ).addClass("album-text");
+                $liAlbum.append($albumText);
 
                 const nomFic = `${serie.nom}-${album.numero}-${album.titre}`.replace(/'|!|\?|\.|"|:|\$/g, "");
                 const $img = $("<img>")
@@ -79,7 +81,7 @@ jQuery(document).ready(function ($) {
 
                 const $addToCartBtn = $("<button>")// Ajouter un bouton pour ajouter l'album au panier
                     .text("Ajouter au panier")
-                    .addClass("add-to-cart");
+                    .addClass("add-to-cart").addClass("add-to-cart-btn");
                 $liAlbum.append($addToCartBtn);
 
 
